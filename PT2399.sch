@@ -489,32 +489,6 @@ F2 "out" O R 3800 4750 50
 F3 "in" I L 3300 4750 50 
 F4 "time" O R 3800 4650 50 
 $EndSheet
-$Comp
-L Device:R_POT RV101
-U 1 1 5F93A029
-P 5250 5000
-F 0 "RV101" H 5181 5046 50  0000 R CNN
-F 1 "a100k" H 5181 4955 50  0000 R CNN
-F 2 "" H 5250 5000 50  0001 C CNN
-F 3 "~" H 5250 5000 50  0001 C CNN
-	1    5250 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0102
-U 1 1 5F93A02F
-P 5250 5150
-F 0 "#PWR0102" H 5250 4900 50  0001 C CNN
-F 1 "GND" H 5255 4977 50  0000 C CNN
-F 2 "" H 5250 5150 50  0001 C CNN
-F 3 "" H 5250 5150 50  0001 C CNN
-	1    5250 5150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5250 4750 5250 4850
-Wire Wire Line
-	5500 5000 5400 5000
 Text GLabel 6500 5000 2    50   Output ~ 0
 delay_out
 $Comp
@@ -530,8 +504,6 @@ F 3 "~" H 6200 5000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6200 4850 6200 4750
-Wire Wire Line
-	5250 4750 5700 4750
 $Comp
 L power:GND #PWR0103
 U 1 1 5F93A041
@@ -550,27 +522,27 @@ Wire Wire Line
 $Comp
 L Device:CP C102
 U 1 1 5F93FB08
-P 4250 5550
+P 3900 6100
 AR Path="/5F93FB08" Ref="C102"  Part="1" 
 AR Path="/5F90D1E6/5F93FB08" Ref="C?"  Part="1" 
-F 0 "C102" V 4505 5550 50  0000 C CNN
-F 1 "4.7uF" V 4414 5550 50  0000 C CNN
-F 2 "" H 4288 5400 50  0001 C CNN
-F 3 "~" H 4250 5550 50  0001 C CNN
-	1    4250 5550
+F 0 "C102" V 4155 6100 50  0000 C CNN
+F 1 "4.7uF" V 4064 6100 50  0000 C CNN
+F 2 "" H 3938 5950 50  0001 C CNN
+F 3 "~" H 3900 6100 50  0001 C CNN
+	1    3900 6100
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	4600 5550 4400 5550
+	4250 6100 4050 6100
 $Comp
 L Device:R R103
 U 1 1 5F9427F1
-P 4750 5550
-F 0 "R103" V 4543 5550 50  0000 C CNN
-F 1 "1k" V 4634 5550 50  0000 C CNN
-F 2 "" V 4680 5550 50  0001 C CNN
-F 3 "~" H 4750 5550 50  0001 C CNN
-	1    4750 5550
+P 4400 6100
+F 0 "R103" V 4193 6100 50  0000 C CNN
+F 1 "1k" V 4284 6100 50  0000 C CNN
+F 2 "" V 4330 6100 50  0001 C CNN
+F 3 "~" H 4400 6100 50  0001 C CNN
+	1    4400 6100
 	0    1    1    0   
 $EndComp
 $Comp
@@ -635,14 +607,7 @@ F 3 "~" H 2800 4750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3300 4750 3100 4750
-Wire Wire Line
 	1800 4750 1850 4750
-Wire Wire Line
-	3100 5550 3100 4750
-Connection ~ 3100 4750
-Wire Wire Line
-	3100 4750 2950 4750
 $Sheet
 S 4200 4550 500  350 
 U 5F9672E5
@@ -654,13 +619,6 @@ F4 "time" O R 4700 4650 50
 $EndSheet
 Wire Wire Line
 	4200 4750 3800 4750
-Wire Wire Line
-	5250 4750 4700 4750
-Connection ~ 5250 4750
-Wire Wire Line
-	5500 5000 5500 5550
-Wire Wire Line
-	4900 5550 5500 5550
 $Comp
 L Transistor_BJT:2N2219 Q101
 U 1 1 5F998DE9
@@ -758,34 +716,28 @@ Text Label 8200 5000 1    50   ~ 0
 time2
 Wire Wire Line
 	8200 5000 8200 5250
-Wire Wire Line
-	3300 5550 3100 5550
-Wire Wire Line
-	3900 5550 4100 5550
-Text GLabel 3600 5200 2    50   Input ~ 0
+Text GLabel 3400 5750 2    50   Input ~ 0
 !freeze
-Text GLabel 4400 6000 2    50   Input ~ 0
+Text GLabel 4400 6450 2    50   Input ~ 0
 freeze
 Wire Wire Line
 	5700 4750 6200 4750
 Connection ~ 5700 4750
 Wire Wire Line
-	4050 6400 2600 6400
+	4050 6850 2600 6850
 Wire Wire Line
 	2450 4750 2600 4750
 Text GLabel 2150 4350 2    50   Input ~ 0
 !freeze
-Wire Wire Line
-	2600 4750 2600 6400
 Connection ~ 2600 4750
 Wire Wire Line
 	2600 4750 2650 4750
 NoConn ~ 13900 500 
 $Comp
-L 4xxx:4066 U?
+L 4xxx:4066 U101
 U 1 1 5FA87203
 P 2150 4750
-F 0 "U?" H 2150 4577 50  0000 C CNN
+F 0 "U101" H 2150 4577 50  0000 C CNN
 F 1 "4066" H 2150 4486 50  0000 C CNN
 F 2 "" H 2150 4750 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 2150 4750 50  0001 C CNN
@@ -795,42 +747,40 @@ $EndComp
 Wire Wire Line
 	2150 4350 2150 4450
 $Comp
-L 4xxx:4066 U?
+L 4xxx:4066 U101
 U 2 1 5FA8FD4E
-P 3600 5550
-F 0 "U?" H 3600 5377 50  0000 C CNN
-F 1 "4066" H 3600 5286 50  0000 C CNN
-F 2 "" H 3600 5550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 3600 5550 50  0001 C CNN
-	2    3600 5550
+P 3400 6100
+F 0 "U101" H 3400 5927 50  0000 C CNN
+F 1 "4066" H 3400 5836 50  0000 C CNN
+F 2 "" H 3400 6100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 3400 6100 50  0001 C CNN
+	2    3400 6100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3600 5200 3600 5250
+	3400 5750 3400 5800
 $Comp
-L 4xxx:4066 U?
+L 4xxx:4066 U101
 U 3 1 5FA973BA
-P 4350 6400
-F 0 "U?" H 4350 6227 50  0000 C CNN
-F 1 "4066" H 4350 6136 50  0000 C CNN
-F 2 "" H 4350 6400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 4350 6400 50  0001 C CNN
-	3    4350 6400
+P 4350 6850
+F 0 "U101" H 4350 6677 50  0000 C CNN
+F 1 "4066" H 4350 6586 50  0000 C CNN
+F 2 "" H 4350 6850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 4350 6850 50  0001 C CNN
+	3    4350 6850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4650 6400 5700 6400
+	4650 6850 5700 6850
 Wire Wire Line
-	5700 6400 5700 4750
+	4400 6450 4350 6450
 Wire Wire Line
-	4400 6000 4350 6000
-Wire Wire Line
-	4350 6000 4350 6100
+	4350 6450 4350 6550
 $Comp
-L 4xxx:4066 U?
+L 4xxx:4066 U101
 U 5 1 5FA9E68B
 P 5600 1250
-F 0 "U?" H 5830 1296 50  0000 L CNN
+F 0 "U101" H 5830 1296 50  0000 L CNN
 F 1 "4066" H 5830 1205 50  0000 L CNN
 F 2 "" H 5600 1250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 5600 1250 50  0001 C CNN
@@ -840,10 +790,10 @@ $EndComp
 Text GLabel 5600 750  1    50   Input ~ 0
 9V
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0108
 U 1 1 5FAA1536
 P 5600 1750
-F 0 "#PWR?" H 5600 1500 50  0001 C CNN
+F 0 "#PWR0108" H 5600 1500 50  0001 C CNN
 F 1 "GND" H 5605 1577 50  0000 C CNN
 F 2 "" H 5600 1750 50  0001 C CNN
 F 3 "" H 5600 1750 50  0001 C CNN
@@ -851,10 +801,10 @@ F 3 "" H 5600 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4xxx:4049 U?
+L 4xxx:4049 U102
 U 1 1 5FAA233D
 P 8350 1950
-F 0 "U?" H 8350 2267 50  0000 C CNN
+F 0 "U102" H 8350 2267 50  0000 C CNN
 F 1 "4049" H 8350 2176 50  0000 C CNN
 F 2 "" H 8350 1950 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 8350 1950 50  0001 C CNN
@@ -870,10 +820,10 @@ Text GLabel 8750 1950 2    50   Output ~ 0
 Wire Wire Line
 	8750 1950 8650 1950
 $Comp
-L 4xxx:4049 U?
+L 4xxx:4049 U102
 U 7 1 5FAAE1DB
 P 6400 1250
-F 0 "U?" H 6630 1296 50  0000 L CNN
+F 0 "U102" H 6630 1296 50  0000 L CNN
 F 1 "4049" H 6630 1205 50  0000 L CNN
 F 2 "" H 6400 1250 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 6400 1250 50  0001 C CNN
@@ -881,10 +831,10 @@ F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0109
 U 1 1 5FAAEF82
 P 6400 1750
-F 0 "#PWR?" H 6400 1500 50  0001 C CNN
+F 0 "#PWR0109" H 6400 1500 50  0001 C CNN
 F 1 "GND" H 6405 1577 50  0000 C CNN
 F 2 "" H 6400 1750 50  0001 C CNN
 F 3 "" H 6400 1750 50  0001 C CNN
@@ -894,22 +844,164 @@ $EndComp
 Text GLabel 6400 750  1    50   Input ~ 0
 9V
 $Comp
-L Switch:SW_SPST SW?
+L Switch:SW_SPST SW101
 U 1 1 5FAB0252
 P 8350 2600
-F 0 "SW?" H 8350 2835 50  0000 C CNN
+F 0 "SW101" H 8350 2835 50  0000 C CNN
 F 1 "SW_SPST" H 8350 2744 50  0000 C CNN
 F 2 "" H 8350 2600 50  0001 C CNN
 F 3 "~" H 8350 2600 50  0001 C CNN
 	1    8350 2600
 	1    0    0    -1  
 $EndComp
-Text GLabel 8650 2600 2    50   Output ~ 0
+Text GLabel 8750 2600 2    50   Output ~ 0
 freeze
-Wire Wire Line
-	8550 2600 8650 2600
 Text GLabel 8000 2600 0    50   Input ~ 0
 9V
 Wire Wire Line
 	8000 2600 8150 2600
+$Comp
+L Device:R R104
+U 1 1 5FABC0A4
+P 8650 2950
+F 0 "R104" H 8720 2996 50  0000 L CNN
+F 1 "100k" H 8720 2905 50  0000 L CNN
+F 2 "" V 8580 2950 50  0001 C CNN
+F 3 "~" H 8650 2950 50  0001 C CNN
+	1    8650 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5FABD536
+P 8650 3200
+F 0 "#PWR0110" H 8650 2950 50  0001 C CNN
+F 1 "GND" H 8655 3027 50  0000 C CNN
+F 2 "" H 8650 3200 50  0001 C CNN
+F 3 "" H 8650 3200 50  0001 C CNN
+	1    8650 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 3200 8650 3100
+Wire Wire Line
+	8650 2800 8650 2600
+Connection ~ 8650 2600
+Wire Wire Line
+	8650 2600 8750 2600
+Wire Wire Line
+	8550 2600 8650 2600
+Wire Wire Line
+	3700 6100 3750 6100
+$Comp
+L Diode:1N4148 D102
+U 1 1 5FADB825
+P 4500 5400
+F 0 "D102" V 4400 5300 50  0000 R CNN
+F 1 "1N4148" V 4300 5300 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4500 5225 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4500 5400 50  0001 C CNN
+	1    4500 5400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D101
+U 1 1 5FADE642
+P 4350 5400
+F 0 "D101" V 4350 5150 50  0000 L CNN
+F 1 "1N4148" V 4450 5050 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4350 5225 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4350 5400 50  0001 C CNN
+	1    4350 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5FAE0983
+P 4350 5550
+F 0 "#PWR0106" H 4350 5300 50  0001 C CNN
+F 1 "GND" H 4355 5377 50  0000 C CNN
+F 2 "" H 4350 5550 50  0001 C CNN
+F 3 "" H 4350 5550 50  0001 C CNN
+	1    4350 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5FAE0E55
+P 4500 5550
+F 0 "#PWR0107" H 4500 5300 50  0001 C CNN
+F 1 "GND" H 4505 5377 50  0000 C CNN
+F 2 "" H 4500 5550 50  0001 C CNN
+F 3 "" H 4500 5550 50  0001 C CNN
+	1    4500 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 6100 5500 6100
+Wire Wire Line
+	5500 5650 5400 5650
+$Comp
+L power:GND #PWR0102
+U 1 1 5F93A02F
+P 5250 5800
+F 0 "#PWR0102" H 5250 5550 50  0001 C CNN
+F 1 "GND" H 5255 5627 50  0000 C CNN
+F 2 "" H 5250 5800 50  0001 C CNN
+F 3 "" H 5250 5800 50  0001 C CNN
+	1    5250 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV101
+U 1 1 5F93A029
+P 5250 5650
+F 0 "RV101" H 5181 5696 50  0000 R CNN
+F 1 "a100k" H 5181 5605 50  0000 R CNN
+F 2 "" H 5250 5650 50  0001 C CNN
+F 3 "~" H 5250 5650 50  0001 C CNN
+	1    5250 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 5650 5500 6100
+Wire Wire Line
+	4700 4750 5250 4750
+$Comp
+L Device:C C103
+U 1 1 5FB2352A
+P 5250 5050
+F 0 "C103" H 5365 5096 50  0000 L CNN
+F 1 "1u" H 5365 5005 50  0000 L CNN
+F 2 "" H 5288 4900 50  0001 C CNN
+F 3 "~" H 5250 5050 50  0001 C CNN
+	1    5250 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 4900 5250 4750
+Connection ~ 5250 4750
+Wire Wire Line
+	5250 4750 5700 4750
+Wire Wire Line
+	2950 4750 3100 4750
+Wire Wire Line
+	5700 4750 5700 6850
+Wire Wire Line
+	2600 4750 2600 6850
+Wire Wire Line
+	3100 4750 3100 6100
+Connection ~ 3100 4750
+Wire Wire Line
+	3100 4750 3300 4750
+Wire Wire Line
+	5250 5200 5250 5250
+Wire Wire Line
+	4350 5250 4500 5250
+Connection ~ 5250 5250
+Wire Wire Line
+	5250 5250 5250 5500
+Connection ~ 4500 5250
+Wire Wire Line
+	4500 5250 5250 5250
 $EndSCHEMATC
